@@ -1,10 +1,10 @@
-use rocket_okapi::openapi;
-use rocket::{get, post, delete, patch};
 use rocket::serde::json::Json;
+use rocket::{delete, get, patch, post};
+use rocket_okapi::openapi;
 
 use crate::models::track::{NewTrack, Track, UpdateTrack};
-use crate::utils::database::{Db};
-use crate::utils::{response, macros};
+use crate::utils::database::Db;
+use crate::utils::{macros, response};
 
 // crud handlers
 

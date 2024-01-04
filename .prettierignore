@@ -1,0 +1,18 @@
+# projects to ignore
+apps/desktop/src-tauri/
+apps/server/
+
+# misc
+target/
+build/
+dist/
+coverage/
+node_modules/
+.env*
+*.json
+*.lock
+*-lock*
+*.log
+*.yml
+*.md
+*.hbs

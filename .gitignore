@@ -14,8 +14,10 @@ target
 .moon/docker
 
 # data
-/data/*
-!/data/.gitkeep
+apps/server/data/*
+!apps/server/data/.gitkeep
+*-shm
+*-wal
 
 # ide
 .vscode

@@ -1,5 +1,5 @@
 [package]
-name = "playshelf-client"
+name = "playshelf-desktop"
 version = "0.0.0"
 description = "Like Plex, but for DRM-free video games"
 authors = { workspace = true }

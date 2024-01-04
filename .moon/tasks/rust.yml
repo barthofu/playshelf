@@ -1,0 +1,9 @@
+$schema: 'https://moonrepo.dev/schemas/global-project.json'
+
+# rust
+
+tasks:
+
+  format:
+    command: "cargo fmt --all"
+    local: true

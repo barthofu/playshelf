@@ -1,6 +1,9 @@
 use diesel::prelude::*;
 
-use crate::{utils::macros, models::track::{NewTrack, Track, UpdateTrack}};
+use crate::{
+	models::track::{NewTrack, Track, UpdateTrack},
+	utils::macros,
+};
 
 // basic CRUD operations
 

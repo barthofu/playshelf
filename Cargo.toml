@@ -5,9 +5,8 @@ lto = true
 [workspace]
 resolver = "2"
 members = [
-    "apps/client/src-tauri",
+    "apps/desktop/src-tauri",
     "apps/server"
-    #"packages/"
 ]
 
 [workspace.package]

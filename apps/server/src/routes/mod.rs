@@ -1,8 +1,8 @@
 /* other */
-pub mod misc;
 pub mod errors;
+pub mod misc;
 
 /* resources */
-pub mod tracks;
-pub mod audio;
 pub mod artists;
+pub mod audio;
+pub mod tracks;

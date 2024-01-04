@@ -47,7 +47,9 @@ rust:
   version: '1.75.0'
 
   # List of Cargo binaries to install globally and make available.
-  bins: []
+  bins: [
+    "cargo-watch"
+  ]
 
   # List of rustup toolchain components to install and make available.
   components: []

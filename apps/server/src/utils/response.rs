@@ -3,10 +3,10 @@ use schemars::JsonSchema;
 
 #[derive(Serialize, JsonSchema)]
 pub struct Success {
-    pub success: bool
+	pub success: bool,
 }
 
 #[derive(Serialize, JsonSchema)]
 pub struct Message {
-    pub message: String
+	pub message: String,
 }

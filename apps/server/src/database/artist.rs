@@ -1,6 +1,12 @@
 use diesel::prelude::*;
 
-use crate::{utils::macros, models::{artist::{NewArtist, Artist, UpdateArtist, ArtistTrack, NewArtistTrack}, track::{Track}}};
+use crate::{
+	models::{
+		artist::{Artist, ArtistTrack, NewArtist, NewArtistTrack, UpdateArtist},
+		track::Track,
+	},
+	utils::macros,
+};
 
 // basic CRUD operations
 
@@ -13,35 +19,41 @@ macros::crud_database::resource::delete!(artist);
 // associations
 
 macros::crud_database::association::get_all_associations!(
-    get_tracks, 
-    Artist, 
-    track, Track, 
-    artist_tracks, ArtistTrack, 
-    track_id,
+	get_tracks,
+	Artist,
+	track,
+	Track,
+	artist_tracks,
+	ArtistTrack,
+	track_id,
 );
 
 macros::crud_database::association::create_association!(
-    create_track, 
-    Artist, Track, 
-    artist_tracks, ArtistTrack, NewArtistTrack, 
-    artist_id, track_id,
+	create_track,
+	Artist,
+	Track,
+	artist_tracks,
+	ArtistTrack,
+	NewArtistTrack,
+	artist_id,
+	track_id,
 );
 
 macros::crud_database::association::delete_association!(
-    delete_track, 
-    Artist, Track, 
-    artist_tracks, 
-    artist_id, track_id,
+	delete_track,
+	Artist,
+	Track,
+	artist_tracks,
+	artist_id,
+	track_id,
 );
 
 pub fn has_track(artist: &Artist, track: &Track, conn: &SqliteConnection) -> bool {
-
-    ArtistTrack::belonging_to(artist)
-        .select(crate::schema::artist_tracks::track_id)
-        .filter(crate::schema::artist_tracks::track_id.eq(track.id))
-        .first::<i32>(conn)
-        .is_ok()
+	ArtistTrack::belonging_to(artist)
+		.select(crate::schema::artist_tracks::track_id)
+		.filter(crate::schema::artist_tracks::track_id.eq(track.id))
+		.first::<i32>(conn)
+		.is_ok()
 }
 
 // custom operations
-
