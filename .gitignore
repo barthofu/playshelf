@@ -1,0 +1,25 @@
+# secrets
+.env
+
+# node
+.npm
+node_modules
+
+# rust
+.cargo
+target
+
+# moon
+.moon/cache
+.moon/docker
+
+# data
+/data/*
+!/data/.gitkeep
+
+# ide
+.vscode
+.idea
+
+# other
+tmp

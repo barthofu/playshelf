@@ -1,0 +1,17 @@
+[profile.release]
+strip = true
+lto = true
+
+[workspace]
+resolver = "2"
+members = [
+    "apps/client/src-tauri",
+    "apps/server"
+    #"packages/"
+]
+
+[workspace.package]
+license = "MIT"
+edition = "2021"
+repository = "https://github.com/barthofu/playshelf"
+authors = ["Bartholomé Gili <dev.bartho@gmail.com>"]
